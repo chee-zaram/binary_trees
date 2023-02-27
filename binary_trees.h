@@ -30,10 +30,14 @@ struct binary_tree_s
 
 typedef struct binary_tree_s binary_tree_t;
 
+/* main functions */
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
-binary_tree_t *create_node(binary_tree_t *new_node, int value, int side);
-void           binary_tree_print(const binary_tree_t *);
 binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value);
+binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value);
+
+/* helper functions */
+void           binary_tree_print(const binary_tree_t *);
+binary_tree_t *create_node(binary_tree_t *new_node, int value, int side);
 binary_tree_t *insert_node_left(binary_tree_t *new_node, int value, int side);
 binary_tree_t *insert_node_right(binary_tree_t *new_node, int value, int side);
 int            binary_tree_is_leaf(const binary_tree_t *node);
