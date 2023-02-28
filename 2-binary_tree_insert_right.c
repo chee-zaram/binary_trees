@@ -12,7 +12,7 @@ binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value)
 	if (!parent)
 		return (NULL);
 
-	if (value >= parent->n && parent->right == NULL)
+	if (parent->right == NULL)
 		return (insert_node_right(parent, value, LEAF));
 
 	return (insert_node_right(parent, value, REPLACE));
