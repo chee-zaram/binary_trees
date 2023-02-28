@@ -3,6 +3,8 @@
 /**
  * binary_tree_size - Gets the size of a node in a binary tree
  * @tree: Node for which size is to be gotten
+ *
+ * Return: size of the tree, or 0 otherwise
  */
 size_t binary_tree_size(const binary_tree_t *tree)
 {
