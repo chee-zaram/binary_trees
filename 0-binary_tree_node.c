@@ -12,10 +12,10 @@ binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 	if (!parent)
 		return (create_node(parent, value, ROOT));
 
-	if (value < parent->n && parent->left == NULL)
+	if (parent->left == NULL)
 		return (create_node(parent, value, LEFT));
 
-	if (value >= parent->n && parent->right == NULL)
+	if (parent->right == NULL)
 		return (create_node(parent, value, RIGHT));
 
 	return (NULL);
