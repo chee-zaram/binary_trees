@@ -48,6 +48,8 @@ The functions implemented include:
   for which to find the sibling.
 - `binary_tree_uncle`: This function finds the uncle of a given node. It takes a pointer to the node
   for which to find the uncle.
+- `binary_trees_ancestor`: This function finds the lowest common ancestor of two nodes. It takes a pointer
+  to the two nodes in question and returns the a pointer to the lowest common ancestor if it exists.
 
 Each function has a prototype in the binary_trees.h header file and an implementation in the corresponding .c file.
 
@@ -61,6 +63,11 @@ Here is an example usage of the binary_tree_height function:
 ```c
 #include "binary_trees.h"
 
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
     binary_tree_t *root = NULL;
