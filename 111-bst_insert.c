@@ -9,8 +9,11 @@
  */
 static bst_t *insert(bst_t *node, bst_t *new_node)
 {
-	if (new_node->n == node->n)
+	if (!node || new_node->n == node->n)
+	{
+		free(new_node);
 		return (NULL);
+	}
 
 	if (!node->left && node->n > new_node->n)
 	{
