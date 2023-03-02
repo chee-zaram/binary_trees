@@ -22,7 +22,7 @@ size_t binary_tree_size(const binary_tree_t *tree)
  */
 int binary_tree_is_complete(const binary_tree_t *tree)
 {
-	size_t          size, i, root_idx, lchild_idx, rchild_idx;
+	size_t          size, i;
 	binary_tree_t **queue;
 
 	if (tree == NULL)
@@ -34,20 +34,16 @@ int binary_tree_is_complete(const binary_tree_t *tree)
 	if (!queue)
 		return (0);
 
-	root_idx   = 0;
-	lchild_idx = (2 * i) + 1;
-	rchild_idx = (2 * i) + 2;
-
-	queue[root_idx] = (binary_tree_t *)tree;
+	queue[0] = (binary_tree_t *)tree;
 	for (i = 0; i < size; i++)
 	{
 		if (!queue[i])
 			break;
 
-		if (lchild_idx < size)
+		if ((2 * i) + 1 < size)
 		{
-			queue[lchild_idx] = queue[i]->left;
-			queue[rchild_idx] = queue[i]->right;
+			queue[(2 * i) + 1] = queue[i]->left;
+			queue[(2 * i) + 2] = queue[i]->right;
 		}
 	}
 
