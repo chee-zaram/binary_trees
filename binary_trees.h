@@ -67,5 +67,6 @@ binary_tree_t *insert_node_right(binary_tree_t *new_node, int value, int side);
 int            binary_tree_is_leaf(const binary_tree_t *node);
 void           _binary_tree_levelorder(const binary_tree_t *tree, size_t level,
 				       void (*func)(int));
+int            is_complete(const binary_tree_t *, size_t, size_t);
 
 #endif /* for _BINARY_TREES_ */
