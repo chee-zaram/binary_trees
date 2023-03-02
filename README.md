@@ -58,6 +58,8 @@ The functions implemented include:
   It takes a pointer to the node in question.
 - `binary_tree_rotate_right`: This performs a right rotation on a node in a tree.
   It takes a pointer to the node in question.
+- `binary_tree_is_bst`: This function checks if a binary tree fits a binary search tree.
+  It takes a pointer to the root of the tree.
 
 Each function has a prototype in the binary_trees.h header file and an implementation in the corresponding .c file.
 
