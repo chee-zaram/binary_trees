@@ -56,6 +56,8 @@ The functions implemented include:
   of the tree.
 - `binary_tree_rotate_left`: This performs a left rotation on a node in a tree.
   It takes a pointer to the node in question.
+- `binary_tree_rotate_right`: This performs a right rotation on a node in a tree.
+  It takes a pointer to the node in question.
 
 Each function has a prototype in the binary_trees.h header file and an implementation in the corresponding .c file.
 
