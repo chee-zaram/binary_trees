@@ -60,6 +60,8 @@ The functions implemented include:
   It takes a pointer to the node in question.
 - `binary_tree_is_bst`: This function checks if a binary tree fits a binary search tree.
   It takes a pointer to the root of the tree.
+- `bst_insert`: Inserts a new node into a binary search tree. It takes the address of the
+  pointer to the root node in the tree and the value to be stored in the new node.
 
 Each function has a prototype in the binary_trees.h header file and an implementation in the corresponding .c file.
 
