@@ -7,8 +7,7 @@
 #include <unistd.h>
 
 #define ROOT       0
-#define LEFT       1
-#define RIGHT      2
+#define CHILD      1
 #define LEAF       0
 #define REPLACE    1
 #define INCOMPLETE 0
