@@ -6,11 +6,12 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-#define ROOT    0
-#define LEFT    1
-#define RIGHT   2
-#define LEAF    0
-#define REPLACE 1
+#define ROOT       0
+#define CHILD      1
+#define LEAF       0
+#define REPLACE    1
+#define INCOMPLETE 0
+#define COMPLETE   1
 
 /**
  * struct binary_tree_s - Binary tree node
@@ -56,6 +57,7 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 				     const binary_tree_t *second);
 void           binary_tree_levelorder(const binary_tree_t *tree,
 				      void (*func)(int));
+int            binary_tree_is_complete(const binary_tree_t *tree);
 
 /*************************** helper functions ****************************/
 void           binary_tree_print(const binary_tree_t *);

@@ -12,13 +12,7 @@ binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 	if (!parent)
 		return (create_node(parent, value, ROOT));
 
-	if (parent->left == NULL)
-		return (create_node(parent, value, LEFT));
-
-	if (parent->right == NULL)
-		return (create_node(parent, value, RIGHT));
-
-	return (NULL);
+	return (create_node(parent, value, CHILD));
 }
 
 /**
@@ -33,13 +27,6 @@ binary_tree_t *create_node(binary_tree_t *parent, int value, int side)
 {
 	binary_tree_t *new_node = NULL;
 
-	if (side == ROOT)
-		new_node = parent;
-	else if (side == LEFT)
-		new_node = (parent->left);
-	else
-		new_node = (parent->right);
-
 	new_node = malloc(sizeof(binary_tree_t));
 	if (!new_node)
 	{
@@ -47,17 +34,14 @@ binary_tree_t *create_node(binary_tree_t *parent, int value, int side)
 		return (NULL);
 	}
 
-	(new_node)->n     = value;
-	(new_node)->left  = NULL;
-	(new_node)->right = NULL;
+	new_node->n     = value;
+	new_node->left  = NULL;
+	new_node->right = NULL;
 
 	if (side == ROOT)
-	{
-		(new_node)->parent = NULL;
-		return (new_node);
-	}
-
-	(new_node)->parent = parent;
+		new_node->parent = NULL;
+	else if (side == CHILD)
+		new_node->parent = parent;
 
 	return (new_node);
 }
