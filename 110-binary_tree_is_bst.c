@@ -12,7 +12,6 @@ int binary_tree_is_bst(const binary_tree_t *tree)
 
 	if (!tree)
 		return (0);
-
 	if (tree->parent && tree->parent->parent)
 	{
 		/* ancestor should be > or < than current value depending on the side */
@@ -43,6 +42,10 @@ int binary_tree_is_bst(const binary_tree_t *tree)
 
 	if (left_value < tree->n && tree->n < right_value)
 		return (binary_tree_is_bst(tree->left) && binary_tree_is_bst(tree->right));
+
+	if (left_value != 0 || right_value != 0)
+		return (left_value ? binary_tree_is_bst(tree->left)
+				   : binary_tree_is_bst(tree->right));
 
 	return (0);
 }
