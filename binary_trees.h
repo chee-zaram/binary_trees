@@ -2,6 +2,7 @@
 #define _BINARY_TREES_
 
 #include <errno.h>
+#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
