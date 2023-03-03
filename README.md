@@ -64,6 +64,11 @@ The functions implemented include:
   pointer to the root node in the tree and the value to be stored in the new node.
 - `array_to_bst`: This function makes a binary search tree from an array of integers.
   It takes in a pointer to the first integer in the array, and the size of the array.
+- `bst_search`: This function finds a node in a tree.
+  It takes a pointer to the root node and the value of the node to find.
+- `bst_remove`: This function removes a node from a tree. It takes the address of the pointer
+  to the root node and the value of the node to remove.
+  If the node to be deleted has two children, it is replaced with its first in-order successor.
 
 Each function has a prototype in the binary_trees.h header file and an implementation in the corresponding .c file.
 
