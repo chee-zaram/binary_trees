@@ -62,6 +62,8 @@ The functions implemented include:
   It takes a pointer to the root of the tree.
 - `bst_insert`: Inserts a new node into a binary search tree. It takes the address of the
   pointer to the root node in the tree and the value to be stored in the new node.
+- `array_to_bst`: This function makes a binary search tree from an array of integers.
+  It takes in a pointer to the first integer in the array, and the size of the array.
 
 Each function has a prototype in the binary_trees.h header file and an implementation in the corresponding .c file.
 
