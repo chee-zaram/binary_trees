@@ -58,7 +58,8 @@ The functions implemented include:
   It takes a pointer to the node in question.
 - `binary_tree_rotate_right`: This performs a right rotation on a node in a tree.
   It takes a pointer to the node in question.
-- `binary_tree_is_bst`: This function checks if a binary tree fits a binary search tree.
+- `binary_tree_is_bst`: This function checks if a binary tree fits a
+  [Binary Search Tree](https://en.wikipedia.org/wiki/Binary_search_tree).
   It takes a pointer to the root of the tree.
 - `bst_insert`: Inserts a new node into a binary search tree. It takes the address of the
   pointer to the root node in the tree and the value to be stored in the new node.
@@ -69,6 +70,8 @@ The functions implemented include:
 - `bst_remove`: This function removes a node from a tree. It takes the address of the pointer
   to the root node and the value of the node to remove.
   If the node to be deleted has two children, it is replaced with its first in-order successor.
+- `binary_tree_is_avl`: This function takes in a pointer to the root node of the tree and
+  determines whether the tree is a valid [AVL](https://en.wikipedia.org/wiki/AVL_tree) tree or not.
 
 Each function has a prototype in the binary_trees.h header file and an implementation in the corresponding .c file.
 
