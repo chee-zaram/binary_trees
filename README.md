@@ -74,6 +74,8 @@ The functions implemented include:
   determines whether the tree is a valid [AVL](https://en.wikipedia.org/wiki/AVL_tree) tree or not.
 - `avl_insert`: This function takes in the address of the root node of a an AVL tree and the value
   of the new node to insert into the tree.
+- `array_to_avl`: This takes in an array of integers and the number of items in the array, and creates
+  an AVL tree.
 
 Each function has a prototype in the binary_trees.h header file and an implementation in the corresponding .c file.
 
