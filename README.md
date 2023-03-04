@@ -72,6 +72,8 @@ The functions implemented include:
   If the node to be deleted has two children, it is replaced with its first in-order successor.
 - `binary_tree_is_avl`: This function takes in a pointer to the root node of the tree and
   determines whether the tree is a valid [AVL](https://en.wikipedia.org/wiki/AVL_tree) tree or not.
+- `avl_insert`: This function takes in the address of the root node of a an AVL tree and the value
+  of the new node to insert into the tree.
 
 Each function has a prototype in the binary_trees.h header file and an implementation in the corresponding .c file.
 
